@@ -2,16 +2,23 @@
 
 ## 현재 상태
 <!-- /wrap이 매 세션 이 섹션을 업데이트합니다 -->
-- **상태:** 소스 설정 완료, 첫 뉴스레터 드래프트 발송
+- **상태:** 자동화 완료 — 뉴스레터 발행·피드백 수집 루틴 모두 가동 중
 - **주요 기능:**
-  - RSS 소스 목록 구성 (`sources.md`) — Hacker News, Latent Space, vibecodingtrends.com, Anthropic, HuggingFace, GeekNews
-  - 뉴스레터 설정 파일 (`newsletter.md`) — 선별 기준, 포맷, 수신자
-  - 첫 Gmail 드래프트 생성 성공 (baboyazz97@gmail.com)
+  - 뉴스레터 자동화 트리거 (매주 월요일 9시 KST) — curl RSS 수집 + Python 스코어링 + Gmail 드래프트
+  - 피드백 수집 트리거 (매주 금요일 9시 KST) — 독자 답장 감지 → feedback-pending.md → 알림 드래프트
+  - `newsletter.md` — 키워드 스코어링 룰, 카테고리 색상, 피드백 문구 포함
+  - GitHub 저장소 연동 완료 (baboyazz97-coder/news-letter, main 브랜치)
 - **알려진 이슈:** Reddit RSS 서버 사이드 접근 차단 (대체 소스로 운영 중)
 - **마지막 발행:** Issue 1 (2026-04-22, 수동 발행)
 
 ## 세션 로그
 <!-- ⚠️ APPEND ONLY — 아래 항목을 절대 삭제/수정하지 마세요. 새 항목은 이 줄 바로 아래에 추가합니다. -->
+
+### 2026-04-22 (세션 3)
+- 뉴스레터 트리거 프롬프트 고도화 (curl + Python 스코어링, Issue 번호 추적, 카테고리 색상)
+- `newsletter.md` — 키워드 스코어링 룰 30개/제외 15개, 카테고리 색상표, 피드백 문구 추가
+- 피드백 수집 트리거 신규 생성 (매주 금요일 9시 KST, `trig_01KVMboqRmRKpYSMsWJcvku2`)
+- GitHub 연동 완료 및 모든 변경사항 main 브랜치에 푸시
 
 ### 2026-04-22 (세션 2)
 - `sources.md`, `newsletter.md` 설정 파일 분리 생성
