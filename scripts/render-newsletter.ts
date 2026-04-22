@@ -23,11 +23,25 @@ async function main() {
     process.exit(1)
   }
 
+  // Runtime shape validation
+  if (
+    typeof data !== 'object' ||
+    data === null ||
+    !Array.isArray(data.highlights) ||
+    !Array.isArray(data.toolUpdates) ||
+    !Array.isArray(data.readings) ||
+    typeof data.issueDate !== 'string' ||
+    typeof data.intro !== 'string'
+  ) {
+    process.stderr.write('Error: JSON 구조 오류 — NewsletterProps 형식이 아닙니다.\n')
+    process.exit(1)
+  }
+
   const html = await render(createElement(NewsletterEmail, data))
   process.stdout.write(html)
 }
 
 main().catch((err) => {
-  process.stderr.write(`Error: ${String(err)}\n`)
+  process.stderr.write(`Error: ${err instanceof Error ? err.stack : String(err)}\n`)
   process.exit(1)
 })
