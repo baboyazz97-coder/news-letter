@@ -41,15 +41,6 @@ nfl, sports, cooking, fashion, travel, celebrity
 
 ---
 
-## 카테고리 색상 (HTML)
-
-| 카테고리 | 색상 코드 |
-|----------|-----------|
-| 툴 업데이트 | `#0066cc` (파랑) |
-| 모델 릴리즈 | `#7c3aed` (보라) |
-| 실무 사례 | `#059669` (초록) |
-| 연구·통계 | `#d97706` (주황) |
-
 ---
 
 ## 뉴스레터 포맷
@@ -110,7 +101,7 @@ nfl, sports, cooking, fashion, travel, celebrity
 JSON 데이터를 구성한 후 렌더링 스크립트로 HTML을 생성한다:
 
 ```bash
-echo '<위에서 구성한 JSON>' | npx tsx /Users/gyuri/news-letter/scripts/render-newsletter.ts
+echo '<위에서 구성한 JSON>' | npx tsx scripts/render-newsletter.ts
 ```
 
 이 명령의 stdout 출력이 Gmail 드래프트의 HTML 본문이다.
