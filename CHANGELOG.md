@@ -4,7 +4,7 @@
 <!-- /wrap이 매 세션 이 섹션을 업데이트합니다 -->
 - **상태:** 자동화 완료 + HTML 디자인 리디자인 완료
 - **주요 기능:**
-  - 뉴스레터 자동화 트리거 (매주 월요일 9시 KST) — RSS 수집 → Python 스코어링 → React Email HTML → Gmail 드래프트
+  - 뉴스레터 자동화 트리거 (매주 월요일 9시 KST) — WebSearch 5개 쿼리 → 키워드 스코어링 → React Email HTML → Gmail 드래프트
   - 피드백 수집 트리거 (매주 금요일 9시 KST) — 독자 답장 감지 → feedback-pending.md → 알림 드래프트
   - `emails/newsletter.tsx` — 티얼(#0d9488) 디자인 React Email 컴포넌트 (한국어 섹션, 조건부 국내 소식)
   - `scripts/render-newsletter.ts` — stdin JSON → stdout HTML 렌더 스크립트 (런타임 구조 검증 포함)
@@ -15,6 +15,10 @@
 
 ## 세션 로그
 <!-- ⚠️ APPEND ONLY — 아래 항목을 절대 삭제/수정하지 마세요. 새 항목은 이 줄 바로 아래에 추가합니다. -->
+
+### 2026-04-22 (세션 5)
+- CCR 원격 트리거 환경에서 Bash curl RSS 수집 불가(네트워크 샌드박스) 확인
+- 뉴스레터 트리거 STEP 4-5를 WebSearch 5개 쿼리 방식으로 교체
 
 ### 2026-04-22 (세션 4)
 - `resend/react-email` 스킬 설치, 뉴스레터 디자인 리디자인 (티얼 컬러, 웜 스타일, 한국어 소제목, 비전문가용)
