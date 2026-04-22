@@ -76,6 +76,9 @@ nfl, sports, cooking, fashion, travel, celebrity
 
 ---
 소스: sources.md 참조
+
+---
+이번 주 뉴스레터 어떠셨나요? 더 보고 싶은 주제, 빼줬으면 하는 내용이 있으면 이 이메일에 답장으로 알려주세요.
 ```
 
 ---
