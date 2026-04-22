@@ -21,6 +21,37 @@
 
 ---
 
+## 키워드 스코어링 룰
+
+각 기사의 제목+본문 요약에 아래 키워드 매칭을 적용한다.
+**포함 키워드 (+1점씩):**
+cursor, claude, copilot, lovable, bolt, windsurf, devin, replit,
+vibe coding, vibe-coding, vibecoding, agentic, agent, mcp,
+llm, gpt, gemini, mistral, llama, qwen, deepseek,
+coding tool, code editor, developer productivity,
+ai coding, ai agent, code generation, context window,
+open source model, model release, benchmark
+
+**제외 키워드 (-2점씩):**
+image generation, text to image, dall-e, midjourney, stable diffusion,
+chatbot review, consumer, subscription price, acquisition rumor,
+nfl, sports, cooking, fashion, travel, celebrity
+
+**판정:** 합산 점수 > 0인 기사만 후보. score 내림차순 정렬.
+
+---
+
+## 카테고리 색상 (HTML)
+
+| 카테고리 | 색상 코드 |
+|----------|-----------|
+| 툴 업데이트 | `#0066cc` (파랑) |
+| 모델 릴리즈 | `#7c3aed` (보라) |
+| 실무 사례 | `#059669` (초록) |
+| 연구·통계 | `#d97706` (주황) |
+
+---
+
 ## 뉴스레터 포맷
 
 ```
