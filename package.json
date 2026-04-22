@@ -1,0 +1,19 @@
+{
+  "name": "news-letter",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "node --import tsx --test tests/**/*.test.ts",
+    "render": "tsx scripts/render-newsletter.ts"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-email": "^3.0.7"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}
