@@ -12,7 +12,6 @@ import {
   Tailwind,
   pixelBasedPreset,
 } from 'react-email'
-import { createElement } from 'react'
 
 export interface Article {
   title: string
@@ -153,7 +152,6 @@ export function NewsletterEmail({
                     style={{
                       backgroundColor: C.mintBg,
                       borderLeft: `3px solid ${C.tealDark}`,
-                      borderStyle: 'none none none solid',
                       padding: '14px 16px',
                       borderRadius: '0 8px 8px 0',
                       marginBottom: i < highlights.length - 1 ? '10px' : '0',
@@ -203,7 +201,7 @@ export function NewsletterEmail({
             {/* 푸터 */}
             <Section style={{ backgroundColor: C.tealDark, padding: '24px 32px', marginTop: '8px', textAlign: 'center' }}>
               <Text style={{ margin: '0 0 12px', fontSize: '12px', color: '#ccfbf1', lineHeight: '1.8' }}>
-                이번 주 뉴스레터 어떠셨나요?{'\n'}
+                이번 주 뉴스레터 어떠셨나요?<br />
                 더 보고 싶은 주제가 있으면 이 메일에 답장으로 알려주세요 😊
               </Text>
               <Text style={{ margin: '0', fontSize: '10px', color: '#99f6e4' }}>
