@@ -2,17 +2,24 @@
 
 ## 현재 상태
 <!-- /wrap이 매 세션 이 섹션을 업데이트합니다 -->
-- **상태:** 자동화 완료 — 뉴스레터 발행·피드백 수집 루틴 모두 가동 중
+- **상태:** 자동화 완료 + HTML 디자인 리디자인 완료
 - **주요 기능:**
-  - 뉴스레터 자동화 트리거 (매주 월요일 9시 KST) — curl RSS 수집 + Python 스코어링 + Gmail 드래프트
+  - 뉴스레터 자동화 트리거 (매주 월요일 9시 KST) — RSS 수집 → Python 스코어링 → React Email HTML → Gmail 드래프트
   - 피드백 수집 트리거 (매주 금요일 9시 KST) — 독자 답장 감지 → feedback-pending.md → 알림 드래프트
-  - `newsletter.md` — 키워드 스코어링 룰, 카테고리 색상, 피드백 문구 포함
+  - `emails/newsletter.tsx` — 티얼(#0d9488) 디자인 React Email 컴포넌트 (한국어 섹션, 조건부 국내 소식)
+  - `scripts/render-newsletter.ts` — stdin JSON → stdout HTML 렌더 스크립트 (런타임 구조 검증 포함)
+  - `newsletter.md` — 소제목 한국어화 규칙, 비전문가용 쉬운 설명 지침, JSON→HTML 렌더 방법 포함
   - GitHub 저장소 연동 완료 (baboyazz97-coder/news-letter, main 브랜치)
 - **알려진 이슈:** Reddit RSS 서버 사이드 접근 차단 (대체 소스로 운영 중)
 - **마지막 발행:** Issue 1 (2026-04-22, 수동 발행)
 
 ## 세션 로그
 <!-- ⚠️ APPEND ONLY — 아래 항목을 절대 삭제/수정하지 마세요. 새 항목은 이 줄 바로 아래에 추가합니다. -->
+
+### 2026-04-22 (세션 4)
+- `resend/react-email` 스킬 설치, 뉴스레터 디자인 리디자인 (티얼 컬러, 웜 스타일, 한국어 소제목, 비전문가용)
+- `emails/newsletter.tsx` React Email 컴포넌트, `scripts/render-newsletter.ts` 렌더 스크립트, 6개 TDD 테스트 추가
+- 뉴스레터 트리거 프롬프트 업데이트 — 소제목 한국어화 강제, render script 연동, 즉시 실행 테스트
 
 ### 2026-04-22 (세션 3)
 - 뉴스레터 트리거 프롬프트 고도화 (curl + Python 스코어링, Issue 번호 추적, 카테고리 색상)
